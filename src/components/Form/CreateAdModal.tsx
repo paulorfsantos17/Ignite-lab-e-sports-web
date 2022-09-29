@@ -27,7 +27,7 @@ export default function CreateAdModal() {
     }
 
     try {
-      axios.post(`http://localhost:3333/games/${data.game}/ads`, 
+      axios.post(`http://15.229.85.132:3333/games/${data.game}/ads`, 
       {
         "name" : data.name,
         "yearsPlaying" : Number(data.yearPlaying),
@@ -47,7 +47,7 @@ export default function CreateAdModal() {
   }
 
   useEffect(() => {
-    axios("http://localhost:3333/games")
+    axios("http://15.229.85.132:3333/games")
       .then((response) => setGames(response.data));
   }, []);
 
